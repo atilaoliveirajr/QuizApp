@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quiz App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navigationBar">
+
+        <div class="logoContainer">
+            <img src="img/logo 2.png">
+        </div>
+
+        <div class="quizType">
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadTest()">Átila</a></li>
+                    <li><a href="#" onclick="loadTestBlank()">HTML</a></li>
+                    <li><a href="#" onclick="loadTestBlank()">CSS</a></li>
+                    <li><a href="#" onclick="loadTestBlank()">JS</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <div class="questionArea">
+
+        <div class="finalResultScreen d-none" id="finalResultScreen">
+            <p id="finalResultScreen">Hey Mother Fucker!!!!</p>
+        </div>
+
+        <div class="progress d-none" id="progressBarContainer">
+            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0</div>
+        </div>
+
+        <div id="home" class="home">
+            <p>Welcome to<br>The Awesome HTML Quiz!</p>
+        </div>
+
+        <div class="blankPage d-none" id="blankPage">
+            <p>Test Comming soon</p>
+        </div>
+
+        <div id="quizHTML" class="quizHTML d-none">
+            <div id="question" class="question">
+                In diesem Abschnitt wird eine Frage gestellt.
+            </div>
+
+            <div id="answersContainer">
+                <div class="quizAnswerRow" id="quizAnswerRow1">
+                    <button onclick="answerSelected(1)" class="btn btn-outline-dark" id="btnAnswer1">A</button>
+                    <div id="answer1" class="answer">
+                        Antowort A
+                    </div>
+                </div>
+                <div class="quizAnswerRow" id="quizAnswerRow2">
+                    <button onclick="answerSelected(2)" class="btn btn-outline-dark" id="btnAnswer2">B</button>
+                    <div id="answer2" class="answer">
+                        Antowort B
+                    </div>
+                </div>
+                <div class="quizAnswerRow" id="quizAnswerRow3">
+                    <button onclick="answerSelected(3)" class="btn btn-outline-dark" id="btnAnswer3">C</button>
+                    <div id="answer3" class="answer ">
+                        Antowort C
+                    </div>
+                </div>
+                <div class="quizAnswerRow" id="quizAnswerRow4">
+                    <button onclick="answerSelected(4)" class="btn btn-outline-dark" id="btnAnswer4">D</button>
+                    <div id="answer4" class="answer">
+                        Antowort D
+                    </div>
+                </div>
+            </div>
+
+            <div class="testNavigator">
+                <div class="navBtn">
+                    <a onclick="restart()">Restart</a>
+                </div>
+
+                <div class="navBtn">
+                    <a onclick="nextQuestion()">Next</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
